@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Info</title>
+</head>
+<body>
+    <a href="{{url_for('home')}}" class="home a-txt">HOME</a>
+    <div class="login-container auth-cont">
+        <div class="auth-wrapper info-cont">
+            <h1 class="auth-head">Information</h1>
+            <p>Enter your blood type below.</p>
+            <form method = 'POST' action="dashboard" class = 'auth-form info-form', name = 'blood-info'>
+                <div class="drop-down-cont">
+                    <select name="blood-info" id="blood type" class="select">
+                        <option value="A+" class="drop-down-option">A+</option>
+                        <option value="A-" class="drop-down-option">A-</option>
+                        <option value="B+" class="drop-down-option">B+</option>
+                        <option value="B-" class="drop-down-option">B-</option>
+                        <option value="AB+" class="drop-down-option">AB+</option>
+                        <option value="AB-" class="drop-down-option">AB-</option>
+                        <option value="O+" class="drop-down-option">O+</option>
+                        <option value="O-" class="drop-down-option">O-</option>
+                    </select>
+                    <div class='btn-cont'>
+                        <input type="submit" class='submit-btn button'></input>
+                    </div>
+                </div>  
+            </form>
+        </div>
+    </div>
+</body>
+</html>

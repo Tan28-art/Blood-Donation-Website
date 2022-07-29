@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+:root {
+    --accent-clr: #d83b65;
+    --h1-font-size: 60px;
+    --h2-font-size: 35px;
+    --p-font-size: 20px;
+}
+
+body {
+    font-family: 'Dosis', sans-serif, Helvetica, Arial;
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    color: var(--accent-clr);
+    font-size: var(--h1-font-size);
+    padding: 0px 0px 10px 0px;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: var(--p-font-size);
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.heading-container {
+    max-width: 450px;
+}
+
+.btn-container {
+    margin-top: 25px;
+}
+
+.main-img {
+    height: 500px;
+    width: 500px;
+}
+
+.button {
+    border: none;
+    background-color: var(--accent-clr);
+    color: white;
+    border-radius: 50px;
+    width: 110px;
+    height: 35px;
+    transition-property: background-color;
+    transition-duration: 300ms;
+    font-size: 16px;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: hsl(344,67%,42%);
+}
+
+.learn-more-btn {
+    background-color: white;
+    color: var(--accent-clr);
+    border: 2.5px solid var(--accent-clr);
+    margin-left: 15px;
+    transition-property: background-color, color;
+}
+
+/* hover effet on learn more btn */
+.learn-more-btn:hover {
+    background-color: var(--accent-clr);
+    color: white;
+    box-shadow: none;
+}
+
+.auth-cont {
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* for the border around auth */
+.auth-wrapper {
+    padding: 30px;
+    border: 2.5px solid var(--accent-clr);
+    border-radius: 50px;
+}
+
+.form-txt-field {
+    padding: 10px;
+    margin: 10px 10px 20px 0px;
+    border-radius: 50px;   
+    min-width: 400px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.submit-btn {
+    font-size: 18px;
+}
+
+.auth-form a {
+    margin-top: 10px;
+}
+
+.info-cont {
+    height: 75%;
+    width: 35%;
+}
+
+.info-form {
+    height: inherit;
+}
+
+.drop-down-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 20px;
+    height: 100%;
+}
+
+.btn-cont {
+    display: flex;
+}
+
+.select {
+    width: 100%;
+    height: 35px;
+    border-radius: 50px;
+    border: 2.5px solid var(--accent-clr);
+    padding: 5px;
+    cursor: pointer;
+}
+
+.home {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+    transition-property: color;
+    transition-duration: 300ms;
+}
+
+.a-txt {
+    color: black;
+}
+
+.a-txt-dash {
+    color: white;
+}
+
+.a-txt:hover {
+    color: var(--accent-clr);
+}
+
+.log-out-txt {
+    padding-left: 20px;
+    color: white;
+}
+
+/* Dashboard */
+
+.nav-bar {
+    background-image: url('./Assets/wave.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nav-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 70px;
+    width: fill;
+}
+
+.nav-wrapper {
+    display: flex;
+}
+
+.nav-wrapper a {
+    font-size: 20px;
+    transition-property: color;
+    transition-duration: 300ms;
+}
+
+.main-section {
+    padding: 0px 20px 20px 20px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-section h1 {
+    font-weight: 500;
+}
+
+.did-you-know h2 {
+    font-size: var(--h2-font-size);
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.stats-txt {
+    color: var(--accent-clr);
+}
+
+.dashboard-img {
+    height: 320px;
+    width: 500px;
+}
+
+.data-representation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

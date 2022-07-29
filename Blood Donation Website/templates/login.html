@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Login</title>
+</head>
+<body>
+    <a href="{{url_for('home')}}" class="home a-txt">HOME</a>
+    <div class="login-container auth-cont">
+        <div class="auth-wrapper">
+            <h1 class="auth-head">Sign In</h1>
+            <form method = 'POST' action="" class = 'auth-form'>
+                {{ form.hidden_tag() }}
+                {{ form.username (class_ = 'form-txt-field') }}
+                {{ form.password (class_ = 'form-txt-field') }}
+                {{ form.submit (class_ = 'submit-btn button') }}
+            </form>
+            <br>
+            <a href="{{url_for('register')}}" class="a-txt">Don't have an account? Sign up here.</a>
+        </div>
+    </div>
+</body>
+</html>

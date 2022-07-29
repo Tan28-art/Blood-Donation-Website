@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+	<nav class="nav-bar">
+		<ul class='nav-cont'>
+			<li class="nav-wrapper">
+				<a href="{{url_for('home')}}" class="a-txt-dash home-txt">HOME</a>
+			</li>
+			<li class="nav-wrapper">
+				<a href="https://www.healthline.com/health/benefits-of-donating-blood"class='a-txt-dash' target="_blank" rel="noopener noreferrer">LEARN MORE</a>
+				<a href="{{url_for('logout')}}" class="log-out-txt a-txt-dash">LOG OUT</a>
+			</li>
+		</ul>
+	</nav>
+
+	<br>
+	<br>
+
+	<section class="main-section">
+		<div class="auth-wrapper">
+			<br>
+			<h1> 
+				Welcome {{current_user.username}}
+			</h1>
+			
+			<div class="user-specific-info">
+				<div class="stats">
+					<div class='auth-wrapper'>
+						<p style='font-size: 25px;'><u> Here's some general information about your blood type:<span style="color: #d83b65;"> {{ blood_type }}</span></u></p>
+						<br>
+						<p><b class='stats-txt'> Distribution Among World Population:</b> {{ stats_1 }} </p>
+						<p><b class='stats-txt'> Can Donate To:</b> {{ stats_2 }} </p>
+						<p><b class='stats-txt'> Can Receive From:</b> {{ stats_3 }} </p>
+						<p><b class='stats-txt'> Plasma Compatibility (Can Donate To):</b> {{ stats_4 }} </p>
+					</div>    
+					<img src="../static/Assets/Antigens_BloodTypes.jpg" alt="" class="dashboard-img">
+				</div>
+				<br>
+				<div class="info">
+					<p> {{ info }} </p>
+				</div>
+				<br>
+				<div class="did-you-know">
+					<h2><b class="stats-txt">Did you know?</b></h2>
+					<br>
+					<p> {{ did_you_know }} </p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<br>
+
+	<section class="data-representation-section">
+		<div class="data-representation">
+			<img src="./static/Assets/bar_graph.png" alt="">
+		</div>
+	</section>
+</body>
+</html>
